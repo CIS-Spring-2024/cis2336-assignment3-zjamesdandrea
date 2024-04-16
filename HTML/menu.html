@@ -1,0 +1,191 @@
+<html>
+    <title>Menu</title>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <section id="topb">
+                <img id="banner" alt="logo" src="https://www.uh.edu/images/uh-secondary.svg">
+                </section>
+                <h1 id ="title">Daily Menu</h1>
+            <div class="topnav">
+                <a href="home.html">Home</a>
+                <a class="active" href="menu.html">Menu</a>
+                <a href="menuRequest.html">Request</a>
+                <a href="order.html">Online Order</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <h2 id="know">Welcome to today's menu. We update this daily, please select what you will be eating today and find your nutritional information below, GO COOGS!
+            </h2>
+            <!-- Button to toggle breakfast items -->
+            <section align="center">
+                <button id="breakfastButton" style="border-radius: 50%; width: 60px; height: 60px;">B</button>
+                <button id="lunchButton" style="border-radius: 50%; width: 60px; height: 60px;">L</button>
+                <button id="dinnerButton" style="border-radius: 50%; width: 60px; height: 60px;">D</button>
+            </section>
+            <!--Breakfast Items-->
+            <fieldset id="breakfastMenu" style="display: none;">
+                <legend>Breakfast - $4 for entry from 0800 - 1100</legend>
+                <input type="checkbox" id="eggs"><label for="eggs">Eggs</label><br>
+                <input type="checkbox" id="turkey_sausage_links"><label for="turkey_sausage_links">Turkey Sausage Links</label><br>
+                <input type="checkbox" id="vegan_sausage_patties"><label for="vegan_sausage_patties">Vegan Sausage Patties</label><br>
+                <input type="checkbox" id="grits"><label for="grits">Grits</label><br>
+                <input type="checkbox" id="oatmeal"><label for="oatmeal">Oatmeal</label><br>
+                <input type="checkbox" id="yogurt"><label for="yogurt">Yogurt</label><br>
+                <input type="checkbox" id="french_toast"><label for="french_toast">French Toast</label><br>
+                <input type="checkbox" id="waffles"><label for="waffles">Waffles</label><br>
+                <input type="checkbox" id="apple"><label for="apple">Apple</label><br>
+                <input type="checkbox" id="banana"><label for="banana">Banana</label><br>
+                <input type="checkbox" id="cinnamon_toast_crunch"><label for="cinnamon_toast_crunch">Cinnamon Toast Crunch</label><br>
+                <input type="checkbox" id="life_chex"><label for="life_chex">Life Chex</label><br>
+                <input type="checkbox" id="special_k"><label for="special_k">Special K</label><br>
+                <input type="checkbox" id="lucky_charms"><label for="lucky_charms">Lucky Charms</label><br>
+                <input type="checkbox" id="milk"><label for="milk">Milk</label><br>
+            </fieldset>
+            <!--Lunch Items-->
+            <fieldset id="lunchMenu" style="display: none;">
+                <legend>Lunch - $8 for entry from 1100 - 1700</legend>
+                <input type="checkbox" id="cheese_burger"><label for="cheese_burger">Cheese Burger</label><br>
+                <input type="checkbox" id="chicken_strips"><label for="chicken_strips">Chicken Strips</label><br>
+                <input type="checkbox" id="grilled_chicken"><label for="grilled_chicken">Grilled Chicken</label><br>
+                <input type="checkbox" id="fries"><label for="fries">Fries</label><br>
+                <input type="checkbox" id="cheese_pizza"><label for="cheese_pizza">Cheese Pizza</label><br>
+                <input type="checkbox" id="pepperoni_pizza"><label for="pepperoni_pizza">Pepperoni Pizza</label><br>
+                <input type="checkbox" id="rice"><label for="rice">Rice</label><br>
+                <input type="checkbox" id="soup"><label for="soup">Soup</label><br>
+                <input type="checkbox" id="salad"><label for="salad">Salad</label><br>
+            </fieldset>
+            <!--Dinner Items-->
+            <fieldset id="dinnerMenu" style="display: none;">
+                <legend>Dinner - $8 for entry from 1700 - 2100</legend>
+                <input type="checkbox" id="meatballs_in_marinara"><label for="meatballs_in_marinara">Meatballs in Marinara</label><br>
+                <input type="checkbox" id="pork_tacos"><label for="pork_tacos">Pork Tacos</label><br>
+                <input type="checkbox" id="pasta"><label for="pasta">Pasta</label><br>
+                <input type="checkbox" id="dinner_roll"><label for="dinner_roll">Dinner Roll</label><br>
+                <input type="checkbox" id="dinner_cheese_pizza"><label for="dinner_cheese_pizza">Cheese Pizza</label><br>
+                <input type="checkbox" id="dinner_pepperoni_pizza"><label for="dinner_pepperoni_pizza">Pepperoni Pizza</label><br>
+                <input type="checkbox" id="dinner_rice"><label for="dinner_rice">Rice</label><br>
+                <input type="checkbox" id="dinner_soup"><label for="dinner_soup">Soup</label><br>
+                <input type="checkbox" id="dinner_salad"><label for="dinner_salad">Salad</label><br>
+            </fieldset>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <h1 id="para">Daily Nutrional Goal for 2,200 Calories</h1>
+            <div id="myplot1" style="width:100%;max-width:700px;margin-left: auto;margin-right: auto;"></div>
+            <script>
+                const xArray1 = ["Carbohydrates: <br> 225g - 325g", "Protein: <br> 60g - 70g", "Fat: <br> 40g - 60g"];
+                const yArray1 = [40,30,30];
+                const data1= [{
+                    labels:xArray1,
+                    values:yArray1,
+                    type:"pie",
+                    orientation:"v",
+                    marker:{color:"red"}
+                }];
+                const layout1 ={title:"Nutritional Guideline"}
+                Plotly.newPlot("myplot1", data1, layout1);
+            </script>
+            <br>
+            <fieldset id="menu">
+                <legend>Nutritional Data</legend>
+                <p id="cal"> The total amount of calories for your selected items are: </p>
+                <p id="pro"> The total amount of protein (in grams) for your selected items are: </p>
+                <p id="fat"> The total amount of fat (in grams) for your selected items are: </p>
+                <p id="carbs"> The total amount of carbohydrates (in grams) for your selected items are: </p>
+            </fieldset>
+            <script>
+                const nutritionalData = {
+                'Eggs': { calories: 155, protein: 13, fat: 11, carbs: 1 },
+                'Turkey Sausage Links': { calories: 150, protein: 14, fat: 8, carbs: 2 },
+                'Vegan Sausage Patties': { calories: 100, protein: 10, fat: 5, carbs: 3 },
+                'Grits': { calories: 90, protein: 2, fat: 0, carbs: 20 },
+                'Oatmeal': { calories: 150, protein: 2, fat: 0, carbs: 24 },
+                'Yogurt': { calories: 90, protein: 9, fat: 4, carbs: 15 },
+                'French Toast': { calories: 300, protein: 2, fat: 15, carbs: 30 },
+                'Waffles': { calories: 110, protein: 2, fat: 5, carbs: 30 },
+                'Apple': { calories: 90, protein: 1, fat: 0, carbs: 20 },
+                'Cinnamon Toast Crunch': { calories: 170, protein: 2, fat: 4, carbs: 30 },
+                'Life Chex': { calories: 160, protein: 7, fat: 1, carbs: 25 },
+                'Special K': { calories: 120, protein: 6, fat: 0.5, carbs: 23 },
+                'Lucky Charms': { calories: 110, protein: 2, fat: 1, carbs: 22 },
+                'Milk': { calories: 150, protein: 8, fat: 8, carbs: 13 },
+                'Cheese Burger': { calories: 315, protein: 15, fat: 14, carbs: 33 },
+                'Chicken Strips': { calories: 230, protein: 17, fat: 12, carbs: 12 },
+                'Grilled chicken': { calories: 130, protein: 26, fat: 3, carbs: 0 },
+                'Fries': { calories: 120, protein: 2, fat: 11, carbs: 14 },
+                'Cheese Pizza': { calories: 210, protein: 8, fat: 7, carbs: 27 },
+                'Pepperoni Pizza': { calories: 340, protein: 15, fat: 14, carbs: 39 },
+                'Rice': { calories: 200, protein: 4, fat: 0, carbs: 40 },
+                'Soup': { calories: 90, protein: 0, fat: 0, carbs: 12 },
+                'Salad': { calories: 14, protein: 0, fat: 0, carbs: 0 },
+                'Meatballs in Marinara': { calories: 120, protein: 7, fat: 8, carbs: 5 },
+                'Pork Tacos': { calories: 230, protein: 13, fat: 7, carbs: 31 },
+                'Pasta': { calories: 220, protein: 7, fat: 0, carbs: 38 },
+                'Dinner Roll': { calories: 80, protein: 3, fat: 1, carbs: 14 }
+                };
+
+                function calculateNutrition() {
+                let totalCalories = 0, totalProtein = 0, totalFat = 0, totalCarbs = 0;
+
+                document.querySelectorAll('input[type="checkbox"]:checked').forEach(item => {
+                    const itemLabel = item.nextElementSibling.textContent.trim();
+                    const itemData = nutritionalData[itemLabel];
+                    
+                    if (itemData) {
+                    totalCalories += itemData.calories;
+                    totalProtein += itemData.protein;
+                    totalFat += itemData.fat;
+                    totalCarbs += itemData.carbs;
+                    } else {
+                    console.log('No nutritional data found for:', itemLabel);
+                    }
+                });
+
+                document.getElementById('cal').textContent = "The total amount of calories for your selected items are: " + totalCalories;
+                document.getElementById('pro').textContent = "The total amount of protein (in grams) for your selected items are: " + totalProtein;
+                document.getElementById('fat').textContent = "The total amount of fat (in grams) for your selected items are: " + totalFat;
+                document.getElementById('carbs').textContent = "The total amount of carbohydrates (in grams) for your selected items are: " + totalCarbs;
+                }
+
+                document.querySelectorAll('input[type="checkbox"]').forEach(item => {
+                item.addEventListener('change', calculateNutrition);
+                });
+
+                document.getElementById('breakfastButton').addEventListener('click', function() {
+                    var menu = document.getElementById('breakfastMenu');
+                    if (menu.style.display === 'none') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+                document.getElementById('lunchButton').addEventListener('click', function() {
+                    var menu = document.getElementById('lunchMenu');
+                    if (menu.style.display === 'none') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+                document.getElementById('dinnerButton').addEventListener('click', function() {
+                    var menu = document.getElementById('dinnerMenu');
+                    if (menu.style.display === 'none') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+            </script>
+            </body>
+    </head>
+    
+
+    <body>
+        <h6 id="bottomtag">Sugar Land Munchies LLC Copyright 2024.<br>For hiring and all other inquiries, please visit
+            the <a style="color: rgb(0, 136, 255);" href="contact.html">Contact</a> page.<br>
+            In a rush, place an <a style="color: rgb(0, 136, 255);" href="order.html">Online Order</a>.<br>
+            If you have any recomendations for meals, please visit the <a style="color: rgb(0, 136, 255);" href="menuRequest.html">Menu Request</a> page, 
+            would love to hear your ideas.</h6>
+    </body>
+</html>

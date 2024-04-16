@@ -1,0 +1,59 @@
+<html>
+    <title>Weekly Blog</title>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <section id="topb">
+                    <img id="banner" alt="logo" src="https://www.uh.edu/images/uh-secondary.svg">
+                    </section>
+                <h1 id="title">Weekly Blog</h1>
+            <div class="topnav">
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="menuRequest.html">Request</a>
+                <a href="order.html">Online Order</a>
+                <a class="active" href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <h2 id="know">Looking for advice, you're in the right spot. Come back weekly for the latest advice from Sugar Land Munchies.</h2>
+            <p id="request">Life at school can be difficult. You may often be struggling with juggling all of your classes, your social life, and all of the other
+                responsibilities that come with being a college student. Believe me I get it. I know what it's like to be having issues with studying for classes 
+                while trying to maintain friendships. Being able to succesfully juggle all of these scholarships requires that you a clear and present mind.
+                This is why it is so important to maintain a balanced diet and prioritize foods that have a positive impact on your overall well being.
+                Did you know that increased consumption of foods that are calorie and nutrition dense and high insugar can lead to inflamation in both
+                the body and brain. This can lead to increased stree levels and lower overall enegry which can negatively impact your performance in school. Please review 
+                the graph below to see what foods correlate to low and high stress levels.
+            </p>
+
+            <head><script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+            <body>
+                <div id="myplot" style="width:100%;max-width:700px;margin-left: auto;margin-right: auto;"></div>
+                <script>
+                    const xArray = ["Eggs and Lean Meats", "Fruits and Veggies", "Baked Goods", "Grains and Oats", "Processed Sugar", "Soda", "Water"];
+                    const yArray = [13,16,37,8,43,48,0];
+                    const data= [{
+                        x:xArray,
+                        y:yArray,
+                        type:"bar",
+                        orientation:"v",
+                        marker:{color:"red"}
+                    }];
+                    const layout ={title:"Food and High Stress Correlation"}
+                    Plotly.newPlot("myplot", data, layout);
+                </script>
+            </body>
+
+            <p id="request">I hope you found the blog for this week informative, but before I go, heres a great joke for your next social gathering:<br>
+            Why don't skeletons go to all you can eat buffets?<br>Because they don't have the stomach for it.</p>
+            <h6 id="bottomtag">Sugar Land Munchies LLC Copyright 2024.<br>For hiring and all other inquiries, please visit
+                the <a style="color: rgb(0, 136, 255);" href="contact.html">Contact</a> page.<br>
+                In a rush, place an <a style="color: rgb(0, 136, 255);" href="order.html">Online Order</a>.<br>
+                If you have any recomendations for meals, please visit the <a style="color: rgb(0, 136, 255);" href="menuRequest.html">Menu Request</a> page, 
+                would love to hear your ideas.</h6>
+            </body>
+    </head>
+
+    <body></body>
+</html>

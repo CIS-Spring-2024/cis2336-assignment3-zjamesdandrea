@@ -1,0 +1,73 @@
+<html>
+    <title>Menu Request</title>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <section id="topb">
+                    <img id="banner" alt="logo" src="https://www.uh.edu/images/uh-secondary.svg">
+                    </section>
+                <h1 id="title">Menu Request</h1>
+            <div class="topnav">
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a class="active" href="menuRequest.html">Request</a>
+                <a href="order.html">Online Order</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <h2 id="know">Have dietary restrictions due to religion or lifestyle choices, no problem! We would love to hear about your diet to ensure we can serve you the best food for your lifestyle. Please fill out this form.
+            </h2>
+            <form id="request" onsubmit="alertmessage()">
+               <fieldset>
+                    <legend>Personal Information</legend>
+                    First Name:<br> <input required id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your first name"><br>
+                    Middle Name:<br> <input required id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your middle name"><br>
+                    Last Name:<br> <input required id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your last name"><br>
+                    Cougar Email Address:<br> <input required id="box" onfocus="highlight(this)" onblur="regular(this)" type="text" placeholder="Please enter your UH Cougar email"><br>
+                    UH ID#:<br> <input id="box" required type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your UH ID#"><br>
+                    Phone Number:<br> <input id="box" required type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your phone number"><br>
+               </fieldset>
+               <fieldset>
+                    <legend>Food allergy or Religious Accomodation</legend>
+                    Please enter any food allergies you have:<br> <input onfocus="highlight(this)" onblur="regular(this)" id="box" type="text" placeholder="Please enter food allergies or 'N/A' in no allergies"><br>
+                    Religion to accomodate:<br> <input id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter the religion you want us to accomodate"><br>
+                    Please enter the specific regligious accomodation:<br> <input onfocus="highlight(this)" onblur="regular(this)" id="box" type="text" placeholder="Please enter religious accomodation"><br>
+                    Please enter dietary request:<br> <input onfocus="highlight(this)" onblur="regular(this)" id="box" type="text" placeholder="Please enter any dietary requests"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Menu Request</legend>
+                    Breakfast items:<br> <input id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter breakfast menu request"><br>
+                    Lunch items:<br> <input id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter lunch menu request"><br>
+                    Dinner items:<br> <input id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter dinner menu request"><br>
+                </fieldset>
+                <br>
+                Please review your information and confirm it is correct. If so, please select the bubble.<br>
+                <input type="radio" required> Yes, my information is correct<br><br>
+
+                <button type="submit">Submit</button>
+                <script>
+                    function alertmessage(){
+                        alert("Thank you for your submission, if we have any questions we will reach out. If you have any questions for us, please fill out the contact form, GO COOGS!");
+                        return False;
+                    }
+                    function highlight(x)
+                    {
+                        x.style.background="red";
+                    }
+                    function regular(x)
+                    {
+                        x.style.background="white"
+                    }
+                </script>
+            </form>
+            <h6 id="bottomtag">Sugar Land Munchies LLC Copyright 2024.<br>For hiring and all other inquiries, please visit
+                the <a style="color: rgb(0, 136, 255);" href="contact.html">Contact</a> page.<br>
+                In a rush, place an <a style="color: rgb(0, 136, 255);" href="order.html">Online Order</a>.<br>
+                Thank you for visiting our request page, we cannot wait to read your amazing recipes.
+        </body>
+    </head>
+
+    <body></body>
+</html>

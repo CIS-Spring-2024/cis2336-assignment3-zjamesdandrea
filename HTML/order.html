@@ -1,0 +1,247 @@
+<html>
+    <title>Order Request</title>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <section id="topb">
+                    <img id="banner" alt="logo" src="https://www.uh.edu/images/uh-secondary.svg">
+                    </section>
+                <h1 id="title">Online Order</h1>
+            <div class="topnav">
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="menuRequest.html">Request</a>
+                <a class="active" href="order.html">Online Order</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <h2 id="know">If you're in a rush, you're more than welcome to fill out an online order request. Just be ready to present your 
+                cougar card when coming into pick up your order.
+            </h2>
+            <form id="request" onsubmit="event.preventDefault(); setPickupTime(); return false;">
+               <fieldset>
+                    <legend>Personal Information</legend>
+                    First Name:<br> <input required id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your first name"><br>
+                    Middle Name:<br> <input required id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your middle name"><br>
+                    Last Name:<br> <input required id="box" type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your last name"><br>
+                    Cougar Email Address:<br> <input required id="box" onfocus="highlight(this)" onblur="regular(this)" type="text" placeholder="Please enter your UH Cougar email"><br>
+                    UH ID#:<br> <input id="box" required type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your UH ID#"><br>
+                    Phone Number:<br> <input id="box" required type="text" onfocus="highlight(this)" onblur="regular(this)" placeholder="Please enter your phone number"><br>
+               </fieldset>
+               <br><br>
+               <section align="center">
+                <button id="breakfastButton" style="border-radius: 50%; width: 60px; height: 60px;" onclick="return false;">B</button>
+                <button id="lunchButton" style="border-radius: 50%; width: 60px; height: 60px;" onclick="return false;">L</button>
+                <button id="dinnerButton" style="border-radius: 50%; width: 60px; height: 60px;" onclick="return false;">D</button>
+                </section>
+                <fieldset id="breakfastMenu" style="display: none;">
+                    <legend>Breakfast Online Order</legend>
+                    Please select one of the following grab-and-go meals:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Egg, Sausage, and Cheese English Muffin</option>
+                        <option>Egg, Bacon, and Cheese English Muffin</option>
+                        <option>Egg, and Cheese English Muffin</option>     
+                        <option>Pancakes</option>
+                        <option>Breakfast Burrito</option>
+                    </select><br>
+                    Please select your side:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Greek Yogurt</option>
+                        <option>Vanilla Yogurt</option>
+                        <option>Strawberry Yogurt</option>
+                        <option>Nutrigrain Bar</option>
+                        <option>Oatmeal Cup</option>
+                        <option>Fruit Cup</option>
+                    </select><br>
+                    Please select your drink:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Coffee</option>
+                        <option>Latte</option>
+                        <option>Milk</option>
+                        <option>Water Bottle</option>
+                        <option>Hot Chocolate</option>
+                    </select>
+                    <br>
+                    Please enter the time you will be picking up your order today:<br>
+                    <label for="pickup-hour">Hour:</label>
+                    <select id="pickup-hour">
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        
+                    </select>
+                    <label for="pickup-minute">Minute:</label>
+                    <select id="pickup-minute">
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                    </select>
+                </fieldset>
+
+                <fieldset id="lunchMenu" style="display: none;">
+                    <legend>Lunch Online Order</legend>
+                    Please select one of the following grab-and-go meals:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Peanut Butter and Jelly</option>
+                        <option>Chicken Salad Sandwich</option>
+                        <option>Turkey and Provolone</option>
+                        <option>Ham and American</option>
+                        <option>California Cobb Salad</option>
+                    </select><br>
+                    Please select your side:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Classic Lays Potato Chips</option>
+                        <option>Lays BBQ Chips</option>
+                        <option>Doritos</option>
+                        <option>Nutrigrain Bar</option>
+                        <option>Veggie Sticks with Ranch</option>
+                        <option>Fruit Cup</option>
+                    </select><br>
+                    Please select your drink:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Coke</option>
+                        <option>Sprite</option>
+                        <option>Coke Zero</option>
+                        <option>Water Bottle</option>
+                        <option>Sweet Tea</option>
+                    </select><br>
+                    Please enter the time you will be picking up your order today:<br>
+                    <label for="pickup-hour">Hour:</label>
+                    <select id="pickup-hour">
+                        
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        
+                    </select>
+                    <label for="pickup-minute">Minute:</label>
+                    <select id="pickup-minute">
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                    </select>
+                </fieldset>
+
+                <fieldset id="dinnerMenu" style="display: none;">
+                    <legend>Dinner Online Order</legend>
+                    Please select one of the following grab-and-go meals:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Cheese Burger</option>
+                        <option>Pepperoni Pizza</option>
+                        <option>Cheese Pizza</option>
+                        <option>Meatballs and Pasta</option>
+                        <option>California Cobb Salad</option>
+                    </select><br>
+                    Please select your side:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Classic Lays Potato Chips</option>
+                        <option>Lays BBQ Chips</option>
+                        <option>Doritos</option>
+                        <option>Fries</option>
+                        <option>Breadstick</option>
+                        
+                    </select><br>
+                    Please select your drink:<br>
+                    <select id="drop">
+                        <option></option>
+                        <option>Coke</option>
+                        <option>Sprite</option>
+                        <option>Coke Zero</option>
+                        <option>Water Bottle</option>
+                        <option>Sweet Tea</option>
+                    </select>
+                    <br>
+                    Please enter the time you will be picking up your order today:<br>
+                <label for="pickup-hour">Hour:</label>
+                <select id="pickup-hour">
+
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                </select>
+                <label for="pickup-minute">Minute:</label>
+                <select id="pickup-minute">
+                    <option value="00">00</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                </select>
+                </fieldset>
+            
+                <br><br>
+                <button type="submit">Set Pickup Time</button>
+
+                <h2>Your Selected Pickup Time:</h2>
+                <div id="selected-time"></div>
+
+                <script>
+                    function setPickupTime() {
+                    var selectedHour = document.getElementById('pickup-hour').value;
+                    var selectedMinute = document.getElementById('pickup-minute').value;
+                    document.getElementById('selected-time').innerHTML = "Your order will be ready at " + selectedHour + ":" + selectedMinute;
+                    alert("Thank you for your online order, it will be $12, your order will be ready for pick-up soon, GO COOGS!");
+                    }
+                </script>
+    
+                <script>
+                    function highlight(x)
+                    {
+                        x.style.background="red";
+                    }
+                    function regular(x)
+                    {
+                        x.style.background="white"
+                    }
+                    document.getElementById('breakfastButton').addEventListener('click', function() {
+                    var menu = document.getElementById('breakfastMenu');
+                    if (menu.style.display === 'none') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                    });
+                    document.getElementById('lunchButton').addEventListener('click', function() {
+                    var menu = document.getElementById('lunchMenu');
+                    if (menu.style.display === 'none') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                    });
+                    document.getElementById('dinnerButton').addEventListener('click', function() {
+                    var menu = document.getElementById('dinnerMenu');
+                    if (menu.style.display === 'none') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                    });
+                </script>
+            </form>
+            <h6 id="bottomtag">Sugar Land Munchies LLC Copyright 2024.<br>For hiring and all other inquiries, please visit
+                the <a style="color: rgb(0, 136, 255);" href="contact.html">Contact</a> page.<br>
+                
+                If you have any recomendations for meals, please visit the <a style="color: rgb(0, 136, 255);" href="menuRequest.html">Menu Request</a> page, 
+                would love to hear your ideas.</h6>
+        </body>
+    </head>
+
+    <body></body>
+</html>
