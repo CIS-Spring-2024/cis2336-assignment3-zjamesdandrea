@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Order Confirmation</title>
+        <link rel="stylesheet" href="CSS File\styles.css">
+    </head>
+    <body>
+        <section id="topb">
+            <img id="banner" alt="logo" src="https://www.uh.edu/images/uh-secondary.svg">
+            </section>
+        <h1 id="title">Online Confirmation</h1>
+    <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="menuRequest.html">Request</a>
+        <a href="order.html">Online Order</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+        <h1 id="title">Thank you for your order!</h1>
+        <p id="orderConfirm">Your order has been processed successfully!</p>
+        <p id="orderConfirm">Total Amount: <span id="orderTotal">$0.00</span></p>
+        <img id="headshot" src="Images/uhCooog.jpg" class="center">
+        <script>
+            window.onload = function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const total = urlParams.get('total');
+                document.getElementById('orderTotal').textContent = `$${total}`;
+            };
+        </script>
+    </body>
+</html>

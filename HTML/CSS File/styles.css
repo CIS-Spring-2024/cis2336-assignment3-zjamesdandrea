@@ -17,7 +17,21 @@ body {background-color:rgb(255, 255, 255);
     margin-top: 20px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+#orderConfirm {
+    text-align: center;
+    color: #c50000;
+    margin-top: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*comment*/
+.input-box{
+    width: 250px;
+}
+#count{
+    border-radius: 50%; 
+    width: 60px; 
+    height: 60px;
+}
 .topnav {
     background-color: #b30000;
     height: 50px;
